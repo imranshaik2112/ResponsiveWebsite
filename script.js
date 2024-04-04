@@ -67,3 +67,13 @@ function isValidEmail(email) {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
+let dropdownLinks = document.querySelectorAll(".dropdownLink");
+
+dropdownLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    dropdown.style.display = "none";
+    close.style.display = "none";
+    open.style.display = "block";
+  });
+});
